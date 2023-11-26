@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Movies_Watchlist_API.props" />
+</Project>

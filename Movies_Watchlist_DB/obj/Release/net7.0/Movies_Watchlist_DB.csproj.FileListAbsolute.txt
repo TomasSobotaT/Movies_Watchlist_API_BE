@@ -1,0 +1,14 @@
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\bin\Release\net7.0\Movies_Watchlist_DB.deps.json
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\bin\Release\net7.0\Movies_Watchlist_DB.runtimeconfig.json
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\bin\Release\net7.0\Movies_Watchlist_DB.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\bin\Release\net7.0\Movies_Watchlist_DB.pdb
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.csproj.AssemblyReference.cache
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.AssemblyInfoInputs.cache
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.AssemblyInfo.cs
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.csproj.CoreCompileInputs.cache
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\refint\Movies_Watchlist_DB.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.pdb
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\Movies_Watchlist_DB.genruntimeconfig.cache
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_DB\obj\Release\net7.0\ref\Movies_Watchlist_DB.dll

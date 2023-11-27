@@ -1,4 +1,4 @@
-﻿////Development
+﻿//Development
 //{
 //  "iisSettings": {
 //    "windowsAuthentication": false,
@@ -36,7 +36,11 @@
 //    }
 //  }
 //}
+
+
+
 {
+  //server
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -46,7 +50,6 @@
     }
   },
 
-  //server
   "profiles": {
     "http": {
       "commandName": "Project",
@@ -61,7 +64,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://mwapi.aspifyhost.cz;http://mwapi.aspifyhost.cz",
+      "applicationUrl": "https://tsapi.cz;http://tsapi.cz",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Product"
       }

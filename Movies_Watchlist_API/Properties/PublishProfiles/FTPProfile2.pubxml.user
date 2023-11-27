@@ -8,7 +8,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <EncryptedPassword>
     </EncryptedPassword>
     <_PublishTargetUrl>ftp://d118wh.forpsi.com/www</_PublishTargetUrl>
-    <History>True|2023-11-26T15:38:45.3883998Z;False|2023-11-26T16:20:22.2543034+01:00;False|2023-11-26T16:19:49.4770511+01:00;True|2023-11-26T16:00:12.9271111+01:00;</History>
+    <History>True|2023-11-26T23:14:26.1847473Z;False|2023-11-27T00:08:51.6814870+01:00;True|2023-11-26T21:08:03.7144726+01:00;False|2023-11-26T21:05:44.3659100+01:00;False|2023-11-26T21:03:28.5388697+01:00;False|2023-11-26T21:02:50.9505971+01:00;False|2023-11-26T21:01:42.5292340+01:00;True|2023-11-26T16:38:45.3883998+01:00;False|2023-11-26T16:20:22.2543034+01:00;False|2023-11-26T16:19:49.4770511+01:00;True|2023-11-26T16:00:12.9271111+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -16,10 +16,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 20:22:44</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>11/26/2023 16:35:18</publishTime>
+      <publishTime>11/27/2023 00:05:32</publishTime>
     </File>
     <File Include="appsettings.production.json">
-      <publishTime>11/26/2023 16:37:16</publishTime>
+      <publishTime>11/27/2023 00:13:11</publishTime>
     </File>
     <File Include="Azure.Core.dll">
       <publishTime>06/30/2022 21:28:36</publishTime>
@@ -79,25 +79,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2021 01:40:24</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.deps.json">
-      <publishTime>11/26/2023 16:37:15</publishTime>
+      <publishTime>11/27/2023 00:13:11</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.dll">
-      <publishTime>11/26/2023 16:36:48</publishTime>
+      <publishTime>11/27/2023 00:12:51</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.exe">
-      <publishTime>11/26/2023 16:36:48</publishTime>
+      <publishTime>11/27/2023 00:12:51</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.pdb">
-      <publishTime>11/26/2023 16:36:48</publishTime>
+      <publishTime>11/27/2023 00:12:51</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.runtimeconfig.json">
       <publishTime>11/26/2023 14:08:29</publishTime>
     </File>
     <File Include="Movies_Watchlist_DB.dll">
-      <publishTime>11/26/2023 13:02:19</publishTime>
+      <publishTime>11/26/2023 21:01:15</publishTime>
     </File>
     <File Include="Movies_Watchlist_DB.pdb">
-      <publishTime>11/26/2023 13:02:19</publishTime>
+      <publishTime>11/26/2023 21:01:15</publishTime>
     </File>
     <File Include="runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll">
       <publishTime>03/28/2023 07:28:24</publishTime>
@@ -169,7 +169,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2021 01:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/26/2023 16:37:16</publishTime>
+      <publishTime>11/27/2023 00:13:11</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>11/23/2023 20:22:44</publishTime>

@@ -11,8 +11,9 @@ namespace Movies_Watchlist_DB.Data
     public class WatchlistDbContext : DbContext
     {
       
-            public DbSet<Movie> Movies { get; set; }
-            public WatchlistDbContext(DbContextOptions<WatchlistDbContext> options) : base(options) { }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<DeletedMovie> DeletedMovies { get; set; }
+        public WatchlistDbContext(DbContextOptions<WatchlistDbContext> options) : base(options) { }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

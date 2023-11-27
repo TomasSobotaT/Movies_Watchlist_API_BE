@@ -6,6 +6,7 @@ namespace Movies_Watchlist_API.Interfaces
     {
         void DeleteMovie(int id);
         IEnumerable<T> GetAllMovies();
-        void InsertMovie(Movie movie);
+        T GetById(int id);
+        void InsertMovie(T movie);
     }
 }

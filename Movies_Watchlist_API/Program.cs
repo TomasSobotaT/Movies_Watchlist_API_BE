@@ -33,7 +33,11 @@ builder.Services.AddSwaggerGen(options =>
 
 
 builder.Services.AddScoped<IMovieRepository<Movie>, MovieRepository>();
+builder.Services.AddScoped<IMovieRepository<DeletedMovie>, DeletedMovieRepository>();
+
 builder.Services.AddScoped<IMovieManager<Movie>, MovieManager>();
+builder.Services.AddScoped<IMovieManager<DeletedMovie>, DeletedMovieManager>();
+
 
 builder.Services.AddCors(options =>
 {

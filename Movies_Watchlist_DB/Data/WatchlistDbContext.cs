@@ -13,6 +13,9 @@ namespace Movies_Watchlist_DB.Data
       
         public DbSet<Movie> Movies { get; set; }
         public DbSet<DeletedMovie> DeletedMovies { get; set; }
+
+        public DbSet<TestMovie> TestMovies { get; set; }
+        public DbSet<TestDeletedMovie> TestDeletedMovies { get; set; }
         public WatchlistDbContext(DbContextOptions<WatchlistDbContext> options) : base(options) { }
 
 
@@ -24,17 +27,18 @@ namespace Movies_Watchlist_DB.Data
 
         public void AddTestData(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Movie>().HasData(
-            //    new Movie
-            //    {
-            //        Id = 1,
-            //        Name = "Rambo",
-            //        posterUrl = "https://www.movieposters.com/cdn/shop/products/firstblood24_480x.progressive.jpg?v=1626714427",
-            //        csfdUrl = "www.csfd.cz"
-            //    }
+            modelBuilder.Entity<TestMovie>().HasData(
 
+                new TestMovie
+                {
+                    Id = 200,
+                    Name= "test",
+                    CsfdUrl="test",
+                    PosterUrl="test"
 
-            //    ); ; ;
+                }
+
+                );
         }
     }
 }

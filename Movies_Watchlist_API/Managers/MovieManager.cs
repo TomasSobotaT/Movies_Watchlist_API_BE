@@ -4,21 +4,21 @@ using Movies_Watchlist_DB.Repositories;
 
 namespace Movies_Watchlist_DB.Interfaces
 {
-    public class MovieManager: IMovieManager<Movie>
+    public class MovieManager<T>: IMovieManager<T> where T : BaseEntity
     {
-        private readonly IMovieRepository<Movie> _repository;
+        private readonly IMovieRepository<T> _repository;
 
-        public MovieManager(IMovieRepository<Movie> repository)
+        public MovieManager(IMovieRepository<T> repository)
         {
             _repository = repository;
         }
 
-        public IEnumerable<Movie> GetAllMovies()
+        public IEnumerable<T> GetAllMovies()
         {
             var movies = _repository.GetAll();
 
             if (movies is null)
-                return Enumerable.Empty<Movie>();
+                return Enumerable.Empty<T>();
 
             return movies;
         
@@ -35,18 +35,18 @@ namespace Movies_Watchlist_DB.Interfaces
         }
 
 
-        public void InsertMovie(Movie movie)
+        public void InsertMovie(T movie)
         {
             _repository.Insert(movie);
         }
 
-        public Movie GetById(int id)
+        public T GetById(int id)
         {
             var movie = _repository.Get(id);
 
                 return movie; ;
         }
 
-
+        
     }
 }

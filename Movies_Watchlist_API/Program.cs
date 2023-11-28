@@ -27,17 +27,21 @@ builder.Services.AddSwaggerGen(options =>
         Contact = new OpenApiContact
         {
             Name = "Kontakt",
-            Url = new Uri("https://www.tsobota.cz/")
+            Url = new Uri("https://www.tsobota.cz")
         }
     }));
 
 
-builder.Services.AddScoped<IMovieRepository<Movie>, MovieRepository>();
-builder.Services.AddScoped<IMovieRepository<DeletedMovie>, DeletedMovieRepository>();
+builder.Services.AddScoped<IMovieRepository<Movie>, MovieRepository<Movie>>();
+builder.Services.AddScoped<IMovieRepository<DeletedMovie>, MovieRepository<DeletedMovie>>();
+builder.Services.AddScoped<IMovieRepository<TestMovie>, MovieRepository<TestMovie>>();
+builder.Services.AddScoped<IMovieRepository<TestDeletedMovie>, MovieRepository<TestDeletedMovie>>();
 
-builder.Services.AddScoped<IMovieManager<Movie>, MovieManager>();
-builder.Services.AddScoped<IMovieManager<DeletedMovie>, DeletedMovieManager>();
 
+builder.Services.AddScoped<IMovieManager<Movie>, MovieManager<Movie>>();
+builder.Services.AddScoped<IMovieManager<DeletedMovie>, MovieManager<DeletedMovie>>();
+builder.Services.AddScoped<IMovieManager<TestMovie>, MovieManager<TestMovie>>();
+builder.Services.AddScoped<IMovieManager<TestDeletedMovie>, MovieManager<TestDeletedMovie>>();
 
 builder.Services.AddCors(options =>
 {
@@ -49,11 +53,20 @@ builder.Services.AddCors(options =>
 
     });
 
+    options.AddPolicy("AllowTestHost", builder =>
+    {
+        builder.WithOrigins("https://watchlistmovies.netlify.app")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+
+
+    });
 
 });
 
 
 var app = builder.Build();
+
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
@@ -80,6 +93,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+//app.UseCors();
+
 app.UseCors("AllowHost");
+app.UseCors("AllowTestHost");
 
 app.Run();

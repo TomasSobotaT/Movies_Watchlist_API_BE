@@ -4,10 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Movies_Watchlist_DB.Models
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
      
         [Key]
         public int Id { get; set; }
+        public string Name { get; set; } = "";
+        public string CsfdUrl { get; set; } = "";
+        public string PosterUrl { get; set; } = "";
     }
 }

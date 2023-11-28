@@ -9,40 +9,10 @@ using System.Threading.Tasks;
 
 namespace Movies_Watchlist_DB.Repositories
 {
-    public class MovieRepository : IMovieRepository<Movie>
+    public class MovieRepository<T> :BaseMovieRepository<T>, IMovieRepository<T> where T : BaseEntity
     {
-        private WatchlistDbContext _dbContext;
-        public MovieRepository(WatchlistDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-        public void Delete(Movie entity)
-        {
-            _dbContext.Movies.Remove(entity);
-            _dbContext.SaveChanges();
-        }
+        public MovieRepository(WatchlistDbContext _dbContext) : base(_dbContext)
+        { }
 
-        public bool Exists(int id)
-        {
-            return _dbContext.Movies.Any(x => x.Id == id);
-        }
-
-        public Movie Get(int id)
-        {
-            var movie = _dbContext.Movies.FirstOrDefault(x => x.Id == id);
-            return movie;
-        }
-
-        public IEnumerable<Movie> GetAll()
-        {
-            var movies = _dbContext.Movies.ToArray();
-            return movies;
-        }
-
-        public void Insert(Movie entity)
-        {
-            _dbContext.Movies.Add(entity);
-            _dbContext.SaveChanges();
-        }
     }
 }

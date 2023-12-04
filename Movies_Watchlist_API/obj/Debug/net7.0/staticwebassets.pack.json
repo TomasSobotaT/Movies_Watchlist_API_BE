@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\GitHubZaloha\\Movies_Watchlist_API\\Movies_Watchlist_API\\wwwroot\\img\\api.gif",
+      "PackagePath": "staticwebassets\\img\\api.gif"
+    },
+    {
       "Id": "C:\\GitHubZaloha\\Movies_Watchlist_API\\Movies_Watchlist_API\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

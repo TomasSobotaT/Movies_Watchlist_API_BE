@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Movies_Watchlist_API.Extensions;
 using Movies_Watchlist_API.Interfaces;
 using Movies_Watchlist_API.Models;
 using Movies_Watchlist_DB.Interfaces;
@@ -38,7 +39,14 @@ namespace Movies_Watchlist_API.Controllers
              var movieToDelete = _testMovieManager.GetById(id);
              if (movieToDelete != null)
             {
-                _testDeletedMovieManager.InsertMovie(new TestDeletedMovie { Name = movieToDelete.Name, CsfdUrl = movieToDelete.CsfdUrl, PosterUrl = movieToDelete.PosterUrl });
+                _testDeletedMovieManager.InsertMovie(
+                    new TestDeletedMovie {
+                        Name = movieToDelete.Name, 
+                        CsfdUrl = movieToDelete.CsfdUrl, 
+                        PosterUrl = movieToDelete.PosterUrl, 
+                        DateAdded = movieToDelete.DateAdded, 
+                        DateWatched = DateTime.Now });
+
                 _testMovieManager.DeleteMovie(id);
                 return Ok();
             }
@@ -50,7 +58,7 @@ namespace Movies_Watchlist_API.Controllers
         public IActionResult Add([FromBody] MovieDto movieDto)
         {
 
-            TestMovie movie = new TestMovie { Name = movieDto.Name,PosterUrl=movieDto.posterUrl, CsfdUrl=movieDto.csfdUrl };
+            TestMovie movie = new TestMovie { Name = movieDto.Name.EditMovieName(),PosterUrl=movieDto.posterUrl, CsfdUrl=movieDto.csfdUrl };
             _testMovieManager.InsertMovie(movie);
             return Ok();
 

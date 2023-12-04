@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HtIuJmJ1WTkTthS2WgXdm7hcq7Bsjn/a++L+YnmQp2k=",
+  "Hash": "72vIemhG1LUIif1qew9aGq71qhTsy9trt9yBPbKObyw=",
   "Source": "Movies_Watchlist_API",
   "BasePath": "_content/Movies_Watchlist_API",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\GitHubZaloha\\Movies_Watchlist_API\\Movies_Watchlist_API\\wwwroot\\img\\api.gif",
+      "SourceId": "Movies_Watchlist_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubZaloha\\Movies_Watchlist_API\\Movies_Watchlist_API\\wwwroot\\",
+      "BasePath": "_content/Movies_Watchlist_API",
+      "RelativePath": "img/api.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\api.gif"
     },
     {
       "Identity": "C:\\GitHubZaloha\\Movies_Watchlist_API\\Movies_Watchlist_API\\wwwroot\\js\\site.js",

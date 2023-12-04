@@ -8,5 +8,6 @@ namespace Movies_Watchlist_DB.Models
 {
     public class TestDeletedMovie : BaseEntity
     {
+        public DateTime DateWatched { get; set; } = DateTime.Now;
     }
 }

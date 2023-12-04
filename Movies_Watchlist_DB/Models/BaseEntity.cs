@@ -12,5 +12,7 @@ namespace Movies_Watchlist_DB.Models
         public string Name { get; set; } = "";
         public string CsfdUrl { get; set; } = "";
         public string PosterUrl { get; set; } = "";
+
+        public DateTime DateAdded { get; set; }  = DateTime.Now;
     }
 }

@@ -1,7 +1,11 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using Movies_Watchlist_API.Configuration;
 using Movies_Watchlist_API.Interfaces;
+using Movies_Watchlist_API.Models;
+using Movies_Watchlist_API_Managers;
 using Movies_Watchlist_DB.Data;
 using Movies_Watchlist_DB.Interfaces;
 using Movies_Watchlist_DB.Models;
@@ -30,6 +34,7 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://www.tsobota.cz")
         }
     }));
+builder.Services.AddAutoMapper(typeof(AutomapperConfiguration));
 
 
 builder.Services.AddScoped<IMovieRepository<Movie>, MovieRepository<Movie>>();
@@ -38,10 +43,11 @@ builder.Services.AddScoped<IMovieRepository<TestMovie>, MovieRepository<TestMovi
 builder.Services.AddScoped<IMovieRepository<TestDeletedMovie>, MovieRepository<TestDeletedMovie>>();
 
 
-builder.Services.AddScoped<IMovieManager<Movie>, MovieManager<Movie>>();
-builder.Services.AddScoped<IMovieManager<DeletedMovie>, MovieManager<DeletedMovie>>();
-builder.Services.AddScoped<IMovieManager<TestMovie>, MovieManager<TestMovie>>();
-builder.Services.AddScoped<IMovieManager<TestDeletedMovie>, MovieManager<TestDeletedMovie>>();
+builder.Services.AddScoped<IMovieManager<Movie,BaseMovieDto>, MovieManager<Movie,BaseMovieDto>>();
+builder.Services.AddScoped<IMovieManager<TestMovie, BaseMovieDto>, MovieManager<TestMovie, BaseMovieDto>>();
+builder.Services.AddScoped<IMovieManager<TestDeletedMovie, BaseMovieDto>, MovieManager<TestDeletedMovie, BaseMovieDto>>();
+builder.Services.AddScoped<IMovieManager<DeletedMovie, BaseMovieDto>, MovieManager<DeletedMovie, BaseMovieDto>>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -55,7 +61,7 @@ builder.Services.AddCors(options =>
 
     options.AddPolicy("AllowTestHost", builder =>
     {
-        builder.WithOrigins("https://watchlistmovies.netlify.app")
+        builder.WithOrigins("http://localhost:3000")
         .AllowAnyHeader()
         .AllowAnyMethod();
 
@@ -63,7 +69,6 @@ builder.Services.AddCors(options =>
     });
 
 });
-
 
 var app = builder.Build();
 

@@ -1,31 +1,39 @@
-﻿using Movies_Watchlist_API.Interfaces;
+﻿using AutoMapper;
+using Movies_Watchlist_API.Interfaces;
+using Movies_Watchlist_API.Models;
+using Movies_Watchlist_DB.Interfaces;
 using Movies_Watchlist_DB.Models;
-using Movies_Watchlist_DB.Repositories;
 
-namespace Movies_Watchlist_DB.Interfaces
+
+namespace Movies_Watchlist_API_Managers
 {
-    public class MovieManager<T>: IMovieManager<T> where T : BaseEntity
+    public class MovieManager<T, U> : IMovieManager<T, U> where T : BaseEntity where U : BaseMovieDto
     {
         private readonly IMovieRepository<T> _repository;
+        private IMapper _mapper;
 
-        public MovieManager(IMovieRepository<T> repository)
+        public MovieManager(IMovieRepository<T> repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public IEnumerable<T> GetAllMovies()
+        public IEnumerable<U> GetAllMovies()
         {
             var movies = _repository.GetAll();
 
             if (movies is null)
-                return Enumerable.Empty<T>();
+                return Enumerable.Empty<U>();
 
-            return movies;
-        
+            var moviesDto = _mapper.Map<IEnumerable<U>>(movies);
+
+            return moviesDto;
+
         }
 
 
-        public void DeleteMovie(int id) {
+        public void DeleteMovie(int id)
+        {
 
             var movie = _repository.Get(id);
 
@@ -35,18 +43,21 @@ namespace Movies_Watchlist_DB.Interfaces
         }
 
 
-        public void InsertMovie(T movie)
+        public void InsertMovie(U movieDto)
         {
+            movieDto.Id = 0;
+            var movie = _mapper.Map<T>(movieDto);
+
             _repository.Insert(movie);
         }
 
-        public T GetById(int id)
+        public U GetById(int id)
         {
             var movie = _repository.Get(id);
+            var movieDto = _mapper.Map<U>(movie);
 
-                return movie; ;
+            return movieDto;
         }
 
-        
     }
 }

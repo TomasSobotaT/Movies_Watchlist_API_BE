@@ -13,9 +13,9 @@ namespace Movies_Watchlist_API.Controllers
     [EnableCors("AllowHost")]
     public class ApiController : Controller
     {
-        private readonly IMovieManager<Movie> _movieManager;
-        private readonly IMovieManager<DeletedMovie> _deletedMovieManager;
-        public ApiController(IMovieManager<Movie> movieManager, IMovieManager<DeletedMovie> deletedMovieManager)
+        private readonly IMovieManager<Movie,BaseMovieDto> _movieManager;
+        private readonly IMovieManager<DeletedMovie, BaseMovieDto> _deletedMovieManager;
+        public ApiController(IMovieManager<Movie, BaseMovieDto> movieManager, IMovieManager<DeletedMovie, BaseMovieDto> deletedMovieManager)
         {
             _movieManager = movieManager;
             _deletedMovieManager = deletedMovieManager;
@@ -41,14 +41,7 @@ namespace Movies_Watchlist_API.Controllers
              var movieToDelete = _movieManager.GetById(id);
              if (movieToDelete != null)
             {
-                _deletedMovieManager.InsertMovie(
-                    new DeletedMovie { 
-                        Name = movieToDelete.Name, 
-                        CsfdUrl = movieToDelete.CsfdUrl, 
-                        PosterUrl = movieToDelete.PosterUrl,
-                        DateAdded = movieToDelete.DateAdded, 
-                        DateWatched= DateTime.Now });
-
+                _deletedMovieManager.InsertMovie(movieToDelete);
                 _movieManager.DeleteMovie(id);
                 return Ok();
             }
@@ -57,11 +50,9 @@ namespace Movies_Watchlist_API.Controllers
         }
 
         [HttpPost("movies")]
-        public IActionResult Add([FromBody] MovieDto movieDto)
+        public IActionResult Add([FromBody] BaseMovieDto movieDto)
         {
-
-            Movie movie = new Movie { Name = movieDto.Name.EditMovieName(),PosterUrl=movieDto.posterUrl, CsfdUrl=movieDto.csfdUrl };
-            _movieManager.InsertMovie(movie);
+            _movieManager.InsertMovie(movieDto);
             return Ok();
 
         }

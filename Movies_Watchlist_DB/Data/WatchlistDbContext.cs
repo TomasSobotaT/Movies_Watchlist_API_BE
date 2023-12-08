@@ -27,18 +27,18 @@ namespace Movies_Watchlist_DB.Data
 
         public void AddTestData(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TestMovie>().HasData(
+            //modelBuilder.Entity<TestMovie>().HasData(
 
-                new TestMovie
-                {
-                    Id = 200,
-                    Name= "test",
-                    CsfdUrl="test",
-                    PosterUrl="test"
+            //    new TestMovie
+            //    {
+            //        Id = 200,
+            //        Name= "test",
+            //        CsfdUrl="test",
+            //        PosterUrl="test"
 
-                }
+            //    }
 
-                );
+            //    );
         }
     }
 }

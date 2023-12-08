@@ -12,9 +12,9 @@ namespace Movies_Watchlist_API.Controllers
     [Route("testApi")]
     [EnableCors("AllowTestHost")]
     public class TestApiController : Controller    {
-        private readonly IMovieManager<TestMovie> _testMovieManager;
-        private readonly IMovieManager<TestDeletedMovie> _testDeletedMovieManager;
-        public TestApiController(IMovieManager<TestMovie> movieManager, IMovieManager<TestDeletedMovie> deletedMovieManager)
+        private readonly IMovieManager<TestMovie, BaseMovieDto> _testMovieManager;
+        private readonly IMovieManager<TestDeletedMovie,BaseMovieDto> _testDeletedMovieManager;
+        public TestApiController(IMovieManager<TestMovie, BaseMovieDto> movieManager, IMovieManager<TestDeletedMovie, BaseMovieDto> deletedMovieManager)
         {
             _testMovieManager = movieManager;
             _testDeletedMovieManager = deletedMovieManager;
@@ -39,14 +39,7 @@ namespace Movies_Watchlist_API.Controllers
              var movieToDelete = _testMovieManager.GetById(id);
              if (movieToDelete != null)
             {
-                _testDeletedMovieManager.InsertMovie(
-                    new TestDeletedMovie {
-                        Name = movieToDelete.Name, 
-                        CsfdUrl = movieToDelete.CsfdUrl, 
-                        PosterUrl = movieToDelete.PosterUrl, 
-                        DateAdded = movieToDelete.DateAdded, 
-                        DateWatched = DateTime.Now });
-
+                _testDeletedMovieManager.InsertMovie(movieToDelete);
                 _testMovieManager.DeleteMovie(id);
                 return Ok();
             }
@@ -55,11 +48,10 @@ namespace Movies_Watchlist_API.Controllers
         }
 
         [HttpPost("movies")]
-        public IActionResult Add([FromBody] MovieDto movieDto)
+        public IActionResult Add([FromBody] BaseMovieDto movieDto)
         {
 
-            TestMovie movie = new TestMovie { Name = movieDto.Name.EditMovieName(),PosterUrl=movieDto.posterUrl, CsfdUrl=movieDto.csfdUrl };
-            _testMovieManager.InsertMovie(movie);
+            _testMovieManager.InsertMovie(movieDto);
             return Ok();
 
         }

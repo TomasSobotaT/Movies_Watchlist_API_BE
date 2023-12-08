@@ -9,10 +9,11 @@ namespace Movies_Watchlist_DB.Models
      
         [Key]
         public int Id { get; set; }
+        [Required,MinLength(1)]
         public string Name { get; set; } = "";
-        public string CsfdUrl { get; set; } = "";
+        //public string CsfdUrl { get; set; } = "";
         public string PosterUrl { get; set; } = "";
 
-        public DateTime DateAdded { get; set; }  = DateTime.Now;
+        public DateTime DateAdded { get; set; }
     }
 }

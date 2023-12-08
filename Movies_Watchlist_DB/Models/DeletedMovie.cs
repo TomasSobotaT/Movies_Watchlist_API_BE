@@ -2,6 +2,6 @@
 {
     public class DeletedMovie : BaseEntity
     {
-        public DateTime DateWatched { get; set; } = DateTime.Now;
+        public DateTime DateWatched { get; set; }
     }
 }

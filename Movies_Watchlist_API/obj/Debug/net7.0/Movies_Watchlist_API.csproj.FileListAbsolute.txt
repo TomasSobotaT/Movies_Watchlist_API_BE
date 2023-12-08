@@ -78,3 +78,5 @@ C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Debug\net7.0\Swash
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\obj\Debug\net7.0\Movies_Watchlist_API.MvcApplicationPartsAssemblyInfo.cs
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Debug\net7.0\AutoMapper.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

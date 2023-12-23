@@ -78,3 +78,12 @@ C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\obj\Release\net7.0\ref
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\obj\Release\net7.0\Movies_Watchlist_API.pdb
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\obj\Release\net7.0\Movies_Watchlist_API.genruntimeconfig.cache
 C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\obj\Release\net7.0\ref\Movies_Watchlist_API.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\AutoMapper.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.Extensions.Options.dll
+C:\GitHubZaloha\Movies_Watchlist_API\Movies_Watchlist_API\bin\Release\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

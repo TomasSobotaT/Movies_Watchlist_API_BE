@@ -30,26 +30,45 @@ namespace Movies_Watchlist_API_Managers
             return moviesDto;
 
         }
+        public IEnumerable<U> GetAllMovies(string id)
+        {
+            var movies = _repository.GetAll(id);
 
+            if (movies is null)
+                return Enumerable.Empty<U>();
+
+            var moviesDto = _mapper.Map<IEnumerable<U>>(movies);
+
+            return moviesDto;
+
+        }
 
         public void DeleteMovie(int id)
         {
-
             var movie = _repository.Get(id);
 
             if (movie is not null)
                 _repository.Delete(movie);
-
         }
 
 
         public void InsertMovie(U movieDto)
         {
-            movieDto.Id = 0;
+            movieDto.Id = default;
             var movie = _mapper.Map<T>(movieDto);
 
             _repository.Insert(movie);
         }
+
+        public void InsertMovie(U movieDto, MovieUser user)
+        {
+            movieDto.Id = default;
+            var movie = _mapper.Map<T>(movieDto);
+
+            movie.movieUser = user; 
+            _repository.Insert(movie);
+        }
+
 
         public U GetById(int id)
         {

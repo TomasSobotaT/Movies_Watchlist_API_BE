@@ -30,15 +30,21 @@ namespace Movies_Watchlist_DB.Repositories
             return _dbSet.Any(x => x.Id == id);
         }
 
-        public T Get(int id)
+        public T? Get(int id)
         {
-            T entity = _dbSet.Find(id);
+            T? entity = _dbSet.Find(id);
             return entity;
         }
 
         public IEnumerable<T> GetAll()
         {
             var entity = _dbSet.ToArray();
+            return entity;
+        }
+
+        public IEnumerable<T> GetAll(string userId)
+        {
+            var entity = _dbSet.Where(movie => movie.movieUser.Id == userId).ToArray();
             return entity;
         }
 

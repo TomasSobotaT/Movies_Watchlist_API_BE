@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Movies_Watchlist_DB.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Movies_Watchlist_DB.Data
 {
-    public class WatchlistDbContext : DbContext
+    public class WatchlistDbContext : IdentityDbContext
     {
       
         public DbSet<Movie> Movies { get; set; }

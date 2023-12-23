@@ -8,7 +8,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <EncryptedPassword>
     </EncryptedPassword>
     <_PublishTargetUrl>ftp://d118wh.forpsi.com/www</_PublishTargetUrl>
-    <History>True|2023-12-03T17:46:06.9876169Z;False|2023-12-03T18:42:32.5991884+01:00;False|2023-12-03T18:42:14.8133281+01:00;False|2023-12-03T18:41:46.5696458+01:00;True|2023-12-03T18:10:25.6063168+01:00;False|2023-12-03T17:58:40.9284612+01:00;True|2023-12-03T16:16:28.3340156+01:00;False|2023-12-03T16:12:14.3468080+01:00;False|2023-12-03T16:11:14.7363870+01:00;True|2023-11-29T23:03:24.8208249+01:00;False|2023-11-29T22:57:26.4349532+01:00;True|2023-11-28T20:16:51.6786822+01:00;False|2023-11-28T20:11:22.6314769+01:00;False|2023-11-28T20:01:52.2176600+01:00;False|2023-11-28T20:00:04.7774975+01:00;True|2023-11-27T00:14:26.1847473+01:00;False|2023-11-27T00:08:51.6814870+01:00;True|2023-11-26T21:08:03.7144726+01:00;False|2023-11-26T21:05:44.3659100+01:00;False|2023-11-26T21:03:28.5388697+01:00;False|2023-11-26T21:02:50.9505971+01:00;False|2023-11-26T21:01:42.5292340+01:00;True|2023-11-26T16:38:45.3883998+01:00;False|2023-11-26T16:20:22.2543034+01:00;False|2023-11-26T16:19:49.4770511+01:00;True|2023-11-26T16:00:12.9271111+01:00;</History>
+    <History>True|2023-12-22T22:49:00.4665247Z;True|2023-12-20T22:50:10.3648062+01:00;True|2023-12-20T22:07:44.8257080+01:00;True|2023-12-20T21:59:37.8878471+01:00;True|2023-12-20T21:47:13.3843468+01:00;True|2023-12-20T21:31:47.7088494+01:00;False|2023-12-20T21:27:19.7042071+01:00;True|2023-12-17T23:04:51.8105690+01:00;True|2023-12-17T22:52:14.7764056+01:00;False|2023-12-17T22:45:47.3284737+01:00;True|2023-12-17T22:35:43.2378617+01:00;False|2023-12-17T22:29:46.4544164+01:00;True|2023-12-17T22:21:14.0480540+01:00;True|2023-12-08T21:05:04.6974004+01:00;False|2023-12-08T20:58:03.1459359+01:00;True|2023-12-03T18:46:06.9876169+01:00;False|2023-12-03T18:42:32.5991884+01:00;False|2023-12-03T18:42:14.8133281+01:00;False|2023-12-03T18:41:46.5696458+01:00;True|2023-12-03T18:10:25.6063168+01:00;False|2023-12-03T17:58:40.9284612+01:00;True|2023-12-03T16:16:28.3340156+01:00;False|2023-12-03T16:12:14.3468080+01:00;False|2023-12-03T16:11:14.7363870+01:00;True|2023-11-29T23:03:24.8208249+01:00;False|2023-11-29T22:57:26.4349532+01:00;True|2023-11-28T20:16:51.6786822+01:00;False|2023-11-28T20:11:22.6314769+01:00;False|2023-11-28T20:01:52.2176600+01:00;False|2023-11-28T20:00:04.7774975+01:00;True|2023-11-27T00:14:26.1847473+01:00;False|2023-11-27T00:08:51.6814870+01:00;True|2023-11-26T21:08:03.7144726+01:00;False|2023-11-26T21:05:44.3659100+01:00;False|2023-11-26T21:03:28.5388697+01:00;False|2023-11-26T21:02:50.9505971+01:00;False|2023-11-26T21:01:42.5292340+01:00;True|2023-11-26T16:38:45.3883998+01:00;False|2023-11-26T16:20:22.2543034+01:00;False|2023-11-26T16:19:49.4770511+01:00;True|2023-11-26T16:00:12.9271111+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -16,16 +16,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 20:22:44</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>12/03/2023 17:53:25</publishTime>
+      <publishTime>12/22/2023 23:45:13</publishTime>
     </File>
     <File Include="appsettings.production.json">
-      <publishTime>12/03/2023 18:44:39</publishTime>
+      <publishTime>12/22/2023 23:45:49</publishTime>
+    </File>
+    <File Include="AutoMapper.dll">
+      <publishTime>01/16/2023 16:41:56</publishTime>
+    </File>
+    <File Include="AutoMapper.Extensions.Microsoft.DependencyInjection.dll">
+      <publishTime>04/09/2023 07:58:02</publishTime>
     </File>
     <File Include="Azure.Core.dll">
       <publishTime>06/30/2022 21:28:36</publishTime>
     </File>
     <File Include="Azure.Identity.dll">
       <publishTime>09/19/2022 22:31:34</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
+      <publishTime>10/23/2023 23:35:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.Internal.dll">
+      <publishTime>10/23/2023 23:33:38</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
+      <publishTime>10/23/2023 23:34:10</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll">
+      <publishTime>10/23/2023 23:34:34</publishTime>
     </File>
     <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
       <publishTime>04/15/2020 00:39:12</publishTime>
@@ -44,6 +62,15 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
       <publishTime>10/23/2023 20:28:12</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Identity.Core.dll">
+      <publishTime>10/23/2023 23:34:12</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Identity.Stores.dll">
+      <publishTime>10/23/2023 23:34:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>01/20/2023 00:54:36</publishTime>
     </File>
     <File Include="Microsoft.Identity.Client.dll">
       <publishTime>10/03/2022 19:40:38</publishTime>
@@ -79,25 +106,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2021 01:40:24</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.deps.json">
-      <publishTime>12/03/2023 18:44:39</publishTime>
+      <publishTime>12/22/2023 23:45:49</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.dll">
-      <publishTime>12/03/2023 18:44:32</publishTime>
+      <publishTime>12/22/2023 23:45:42</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.exe">
-      <publishTime>12/03/2023 18:44:32</publishTime>
+      <publishTime>12/22/2023 23:45:42</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.pdb">
-      <publishTime>12/03/2023 18:44:32</publishTime>
+      <publishTime>12/22/2023 23:45:42</publishTime>
     </File>
     <File Include="Movies_Watchlist_API.runtimeconfig.json">
-      <publishTime>11/28/2023 19:59:03</publishTime>
+      <publishTime>12/20/2023 21:26:36</publishTime>
     </File>
     <File Include="Movies_Watchlist_DB.dll">
-      <publishTime>12/03/2023 16:09:35</publishTime>
+      <publishTime>12/22/2023 23:45:40</publishTime>
     </File>
     <File Include="Movies_Watchlist_DB.pdb">
-      <publishTime>12/03/2023 16:09:35</publishTime>
+      <publishTime>12/22/2023 23:45:40</publishTime>
     </File>
     <File Include="runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll">
       <publishTime>03/28/2023 07:28:24</publishTime>
@@ -169,7 +196,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2021 01:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>12/03/2023 18:44:39</publishTime>
+      <publishTime>12/22/2023 23:45:49</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>11/23/2023 20:22:44</publishTime>

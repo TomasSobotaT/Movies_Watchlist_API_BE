@@ -1,51 +1,10 @@
-﻿//Development
-{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:17480",
-      "sslPort": 44393
-    }
-  },
-  "profiles": {
-    "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "http://localhost:5261",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "https://localhost:7181;http://localhost:5261",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    }
-  }
-}
-
-
-
-
-//{ //Server
+﻿////Development
+//{
 //  "iisSettings": {
 //    "windowsAuthentication": false,
 //    "anonymousAuthentication": true,
 //    "iisExpress": {
-//      "applicationUrl": "https://tsapi.cz",
+//      "applicationUrl": "http://localhost:17480",
 //      "sslPort": 44393
 //    }
 //  },
@@ -54,7 +13,7 @@
 //      "commandName": "Project",
 //      "dotnetRunMessages": true,
 //      "launchBrowser": true,
-//      "applicationUrl": "https://tsapi.cz",
+//      "applicationUrl": "http://localhost:5261",
 //      "environmentVariables": {
 //        "ASPNETCORE_ENVIRONMENT": "Development"
 //      }
@@ -63,7 +22,7 @@
 //      "commandName": "Project",
 //      "dotnetRunMessages": true,
 //      "launchBrowser": true,
-//      "applicationUrl": "https://tsapi.cz;http://tsapi.cz",
+//      "applicationUrl": "https://localhost:7181;http://localhost:5261",
 //      "environmentVariables": {
 //        "ASPNETCORE_ENVIRONMENT": "Development"
 //      }
@@ -77,3 +36,44 @@
 //    }
 //  }
 //}
+
+
+
+
+{ //Server
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://tsapi.cz",
+      "sslPort": 44393
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://tsapi.cz",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://tsapi.cz;http://tsapi.cz",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

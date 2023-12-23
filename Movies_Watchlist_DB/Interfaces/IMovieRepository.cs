@@ -10,6 +10,7 @@ namespace Movies_Watchlist_DB.Interfaces
     public interface IMovieRepository<T> where T : BaseEntity
     {
         IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(string id);
         T Get(int id);
         void Insert(T entity);
         void Delete(T entity);

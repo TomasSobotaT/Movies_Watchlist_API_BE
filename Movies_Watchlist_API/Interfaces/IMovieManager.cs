@@ -7,7 +7,9 @@ namespace Movies_Watchlist_API.Interfaces
     {
         void DeleteMovie(int id);
         IEnumerable<U> GetAllMovies();
+        IEnumerable<U> GetAllMovies(string id);
         U GetById(int id);
         void InsertMovie(U movie);
+        void InsertMovie(U movieDto, MovieUser user);
     }
 }

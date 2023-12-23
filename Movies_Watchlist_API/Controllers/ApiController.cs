@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Movies_Watchlist_API.Extensions;
 using Movies_Watchlist_API.Interfaces;
@@ -8,15 +10,22 @@ using Movies_Watchlist_DB.Models;
 
 namespace Movies_Watchlist_API.Controllers
 {
+    [EnableCors("MyCorsPolicy")] 
     [ApiController]
     [Route("api")]
-    [EnableCors("AllowHost")]
+    [AllowAnonymous]
     public class ApiController : Controller
     {
         private readonly IMovieManager<Movie,BaseMovieDto> _movieManager;
         private readonly IMovieManager<DeletedMovie, BaseMovieDto> _deletedMovieManager;
-        public ApiController(IMovieManager<Movie, BaseMovieDto> movieManager, IMovieManager<DeletedMovie, BaseMovieDto> deletedMovieManager)
+
+
+
+        public ApiController(
+            IMovieManager<Movie, BaseMovieDto> movieManager,
+            IMovieManager<DeletedMovie, BaseMovieDto> deletedMovieManager)
         {
+            
             _movieManager = movieManager;
             _deletedMovieManager = deletedMovieManager;
         }
@@ -24,14 +33,21 @@ namespace Movies_Watchlist_API.Controllers
         [HttpGet("movies")]
         public IActionResult GetAll()
         {
-            var result = _movieManager.GetAllMovies().ToList();
-            var result2 = _deletedMovieManager.GetAllMovies().ToList();
+            try
+            {
+                var moviesToWatch = _movieManager.GetAllMovies().ToList();
+                var moviesWatched = _deletedMovieManager.GetAllMovies().ToList();
+
+                var result = new List<List<object>> { moviesToWatch.Cast<object>().ToList(), moviesWatched.Cast<object>().ToList() };
 
 
-            var result3 = new List<List<object>> { result.Cast<object>().ToList(), result2.Cast<object>().ToList() };
+                return Ok(result);
+            }
+            catch(Exception e)
+            { 
+                return BadRequest(e.Message);
+            }
 
-
-            return Ok(result3);
         }
 
         [HttpDelete("movies/{id}")]

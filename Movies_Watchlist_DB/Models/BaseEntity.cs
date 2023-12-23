@@ -15,5 +15,8 @@ namespace Movies_Watchlist_DB.Models
         public string PosterUrl { get; set; } = "";
 
         public DateTime DateAdded { get; set; }
+
+        public virtual MovieUser? movieUser { get; set; }
+
     }
 }
